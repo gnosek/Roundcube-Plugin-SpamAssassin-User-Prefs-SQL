@@ -299,7 +299,7 @@ $(document).ready(function() {
 							obj.title = rcmail.gettext('disabled','sauserprefs');
 							obj.className = 'disabled';
 
-							if (dlangs.indexOf(" " + langlist[i].value + " ") > -1) {
+							if (dlangs.indexOf(" " + langlist[i].value + " ") > -1 || rcmail.env.ok_languages == "all") {
 								langlist[i].checked = true;
 								obj = rcube_find_object('spam_lang_' + i);
 								obj.title = rcmail.gettext('enabled','sauserprefs');
@@ -337,7 +337,7 @@ $(document).ready(function() {
 						}
 
 						if (rcube_find_object('rcmfd_spamskiprblchecks')) {
-							if (rcmail.env.skip_rbl_checks == '1')
+							if (rcmail.env.skip_rbl_checks == '0')
 								rcube_find_object('rcmfd_spamskiprblchecks').checked = true;
 							else
 								rcube_find_object('rcmfd_spamskiprblchecks').checked = false;
