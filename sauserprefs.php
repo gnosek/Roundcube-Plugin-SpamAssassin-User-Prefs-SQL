@@ -49,10 +49,7 @@ class sauserprefs extends rcube_plugin
 
 			$this->sections = array(
 				'general' => array('id' => 'general', 'section' => $this->gettext('spamgeneralsettings')),
-				'tests' => array('id' => 'tests', 'section' => $this->gettext('spamtests')),
 				'bayes' => array('id' => 'bayes', 'section' => $this->gettext('bayes')),
-				'headers' => array('id' => 'headers', 'section' => $this->gettext('headers')),
-				'report' => array('id' => 'report','section' => $this->gettext('spamreportsettings')),
 				'addresses' => array('id' => 'addresses', 'section' => $this->gettext('spamaddressrules')),
 			);
 			$this->cur_section = rcube_utils::get_input_value('_section', rcube_utils::INPUT_GPC);
